@@ -28,8 +28,7 @@ pip --version
 pip install -U docker-compose==1.25.0
 # 验证docker compose版本
 docker-compose --version
-# 安装补全插件
-curl -L https://raw.githubusercontent.com/docker/compose/1.25.0/contrib/completion/bash/docker-compose > /etc/bash_completion.d/docker-compose
+
 ```
 
 ## `docker-compose`卸载
@@ -83,7 +82,6 @@ docker run -it --net mynet --name container1 another_image
 
 ```shell
 # 安装git命令： yum install -y git
-git clone https://gitee.com/zhengqingya/docker-compose.git
 cd docker-compose/Liunx
 ```
 
@@ -143,16 +141,6 @@ docker-compose -f docker-compose-redis.yml -p redis up -d
 docker exec -it redis redis-cli -a 123456  # 密码为123456
 ```
 
-### Jrebel
-
-```shell
-docker-compose -f docker-compose-jrebel.yml -p jrebel up -d
-```
-
-默认反代`idea.lanyus.com`, 运行起来后
-
-1. 激活地址： `ip地址:8888/UUID` -> 注：UUID可以自己生成，并且必须是UUID才能通过验证 -> [UUID在线生成](http://www.uuid.online/)
-2. 邮箱随意填写
 
 ### Nginx
 
@@ -302,8 +290,7 @@ docker exec -it fastdfs_storage /bin/bash
 cd /var/fdfs
 # 执行如下命令,会返回在storage存储文件的路径信息,然后拼接上ip地址即可测试访问
 /usr/bin/fdfs_upload_file /etc/fdfs/client.conf test.jpg
-# ex:
-http://www.zhengqingya.com:8888/group1/M00/00/00/rBEAAl8aYsuABe4wAAhfG6Hv0Jw357.jpg
+
 ```
 
 ### YApi - 高效、易用、功能强大的api管理平台
